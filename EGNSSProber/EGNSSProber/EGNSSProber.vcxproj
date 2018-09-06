@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ClInclude Include="..\..\common\source\inc\eutil.h" />
+    <ClInclude Include="..\..\common\source\inc\gnssparser.h" />
+    <ClInclude Include="..\..\common\source\inc\loopqueue.h" />
+    <ClInclude Include="..\..\common\source\inc\serial.h" />
+    <ClInclude Include="inc\CommPage.h" />
+    <ClInclude Include="inc\EGNSSProber.h" />
+    <ClInclude Include="inc\page.h" />
+    <ClInclude Include="inc\stdafx.h" />
+    <ClInclude Include="inc\TrackPage.h" />
+    <ClInclude Include="Resource.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1A5F6146-EBC0-4825-910E-83EE762B7E7E}</ProjectGuid>
+    <RootNamespace>EGNSSProber</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27924.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="EGNSSProber.ico" />
+    <Image Include="res\connect.bmp" />
+    <Image Include="res\disconnect.bmp" />
+    <Image Include="res\EGNSSProber.ico" />
+    <Image Include="res\settings.bmp" />
+    <Image Include="res\sky.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EGNSSProber.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EGNSSProber.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\common\source\src\eutil.cpp" />
+    <ClCompile Include="..\..\common\source\src\gnssparser.cpp" />
+    <ClCompile Include="..\..\common\source\src\loopqueue.cpp" />
+    <ClCompile Include="..\..\common\source\src\serial.cpp" />
+    <ClCompile Include="src\CommPage.cpp" />
+    <ClCompile Include="src\EGNSSProber.cpp" />
+    <ClCompile Include="src\page.cpp" />
+    <ClCompile Include="src\stdafx.cpp" />
+    <ClCompile Include="src\TrackPage.cpp" />
+    <ClCompile Include="src\VMware.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

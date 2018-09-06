@@ -1,0 +1,206 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\EDisk.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\e.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDisk_DIALOG DIALOG  0, 0, 431, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "EFAT "
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_SECTORDATA,112,11,238,214,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    GROUPBOX        "Data(hex)",IDC_FAT_DATA,110,1,248,229
+    PUSHBUTTON      "Format",IDC_FORMAT_VOL,9,207,28,17
+    LTEXT           "Start Data:",IDC_START_DATA,5,194,41,8
+    EDITTEXT        IDC_STARTDATA_SECTOR,54,191,48,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "FAT Size:",IDC_FATSIZE,5,175,41,8
+    EDITTEXT        IDC_FAT_SIZE,54,172,48,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Reserve:",IDC_RESERVE,5,156,41,8
+    EDITTEXT        IDC_RESERVE_SECTOR,54,153,48,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Disk Size:",IDC_DISK_SIZE,5,137,41,8
+    EDITTEXT        IDC_DISKSIZE,54,134,48,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_CLUSTERSIZE,54,115,48,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Cluster Size:",IDC_CLUSTER_SIZE,5,118,47,8
+    LTEXT           "Sector Size:",IDC_SECTOR_SIZE,5,99,41,8
+    EDITTEXT        IDC_SECOTRSIZE,54,96,48,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "FSType:",IDC_FS_TYPE,5,80,41,8
+    EDITTEXT        IDC_FSTYPE,54,77,48,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "GET",IDC_GET_INFO,9,56,28,17
+    CONTROL         "DUMP FAT",IDC_DUMP_FAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,54,61,49,10
+    LTEXT           "Sector:",IDC_SECTOR,7,43,24,8
+    EDITTEXT        IDC_SECTOR_NUM,45,41,48,12,ES_AUTOHSCROLL
+    LTEXT           "Part:",IDC_PART,14,28,17,8
+    COMBOBOX        IDC_PART_INDEX,45,25,48,89,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "DSK:",IDC_DSK,15,12,16,8
+    COMBOBOX        IDC_DSK_INDEX,45,9,48,96,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "FAT Infomation",IDC_FAT,3,0,104,230
+END
+
+IDD_EFILE_DIALOG DIALOG  0, 0, 348, 234
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "EFile"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "File..",IDC_FILE_SELECT,222,14,50,16
+    EDITTEXT        IDC_FILE_PATH,27,14,183,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FILE_DATA,27,35,243,191,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "EDisk.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "EDisk.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_EDisk_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 430
+        BOTTOMMARGIN, 237
+    END
+
+    IDD_EFILE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 341
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 230
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\EDisk.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

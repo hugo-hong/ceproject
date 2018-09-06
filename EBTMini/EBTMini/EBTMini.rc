@@ -1,0 +1,265 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resdefce.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_EBTMINI             ICON                    "res\\EBTMini.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Open",                        ID_FILE_OPEN
+        MENUITEM "Close",                       ID_FILE_CLOSE
+        MENUITEM "E&xit",                       IDM_FILE_EXIT
+    END
+    POPUP "Debug"
+    BEGIN
+        MENUITEM "BCH",                         ID_DEBUG_BCH
+        MENUITEM "BM",                          ID_DEBUG_BM
+        MENUITEM "BCM",                         ID_DEBUG_BCM
+        MENUITEM "BCP",                         ID_DEBUG_BCP
+        MENUITEM "BCS",                         ID_DEBUG_BCS
+        MENUITEM "BCAT",                        ID_DEBUG_BCAT
+        MENUITEM "BCMusic",                     ID_DEBUG_BCMUSIC
+        MENUITEM "BCMW",                        ID_DEBUG_BCMW
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_EBTMINI ACCELERATORS 
+BEGIN
+    "A",            IDM_HELP_ABOUT,         VIRTKEY, CONTROL, NOINVERT
+    "Q",            IDOK,                   VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOGMAIN DIALOG  0, 0, 323, 175
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "EBTMini"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "",IDC_TAB_BT,"SysTabControl32",0x0,6,14,304,145
+END
+
+IDD_DLG_PAIR DIALOG  0, 0, 320, 190
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "",IDC_LIST_BTADDRESS,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,16,51,219,107
+    CONTROL         "Be Discovered",IDC_CHECK_DISCOVERED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,33,61,10
+    PUSHBUTTON      "Connect",IDC_BT_CONNECT_DISCONECT,179,160,57,17
+    LTEXT           "00:00:00",IDC_DISCOVER_TIME,93,34,45,8
+    LTEXT           "Dev:",IDC_DEVICE_NAME,18,15,126,8
+    EDITTEXT        IDC_PIN_CODE,156,15,79,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "State:",IDC_BT_STATE,179,34,52,8
+END
+
+IDD_DLG_DIAL DIALOG  0, 0, 281, 201
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_EDIT_PHONE,30,15,169,21,ES_AUTOHSCROLL
+    PUSHBUTTON      "1",IDC_BUTTON_1,51,67,27,18
+    PUSHBUTTON      "2",IDC_BUTTON_2,102,67,27,18
+    PUSHBUTTON      "3",IDC_BUTTON_3,156,67,27,18
+    PUSHBUTTON      "4",IDC_BUTTON_4,51,93,27,18
+    PUSHBUTTON      "5",IDC_BUTTON_5,102,94,27,18
+    PUSHBUTTON      "6",IDC_BUTTON_6,156,94,27,18
+    PUSHBUTTON      "7",IDC_BUTTON_7,51,119,27,18
+    PUSHBUTTON      "8",IDC_BUTTON_8,102,121,27,18
+    PUSHBUTTON      "9",IDC_BUTTON_9,156,121,27,18
+    PUSHBUTTON      "0",IDC_BUTTON_0,51,145,27,18
+    PUSHBUTTON      "*",IDC_BUTTON_11,102,145,27,18
+    PUSHBUTTON      "#",IDC_BUTTON_12,156,145,27,18
+    PUSHBUTTON      "Call",IDC_BUTTON_CALL,51,46,27,18
+    PUSHBUTTON      "End",IDC_BUTTON_END,155,44,27,18
+    PUSHBUTTON      "Audio",IDC_BUTTON_AUDIO,102,44,27,18
+END
+
+IDD_DLG_MUSIC DIALOG  0, 0, 324, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "",IDC_SLIDER_MUSIC,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,50,129,202,19
+    LTEXT           "Music Name:",IDC_TEXT_MUSIC_NAME,55,78,103,20
+    PUSHBUTTON      "|<",IDC_PLAY_PREV,19,26,30,21
+    PUSHBUTTON      "|>||",IDC_PLAY_PAUSE,62,15,30,21
+    PUSHBUTTON      ">|",IDC_PLAY_NEXT,105,26,30,21
+    LTEXT           "Total:",IDC_TEXT_TOTAL,261,132,32,8
+    PUSHBUTTON      "|>",IDC_PLAY_STOP,62,38,30,21
+    LTEXT           "Play:",IDC_TEXT_PLAY,16,134,32,8
+END
+
+IDD_DLG_PHONEBOOK DIALOG  0, 0, 335, 203
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "",IDC_LIST_PHONEBOOK,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,36,28,239,136
+    PUSHBUTTON      "Sync",IDC_SYNC_PHONEBOOK,49,168,48,20
+    PUSHBUTTON      "Call",IDC_PHONEBOOK_CALL,186,169,48,20
+    LTEXT           "Sate:",IDC_PHONEBOOK_STATE,38,14,59,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOGMAIN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_DLG_PAIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_DLG_DIAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DLG_MUSIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_DLG_PHONEBOOK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 328
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 196
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resdefce.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""EBTMini.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "EBTMini"
+    IDC_EBTMINI             "EBTMINI"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TOOLS               "Tools"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "EBTMini.rc2"  // non-Microsoft Visual C++ edited resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

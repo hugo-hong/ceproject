@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EGNSSProber", "..\EGNSSProber\EGNSSProber.vcxproj", "{1A5F6146-EBC0-4825-910E-83EE762B7E7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|MT3351_WINCE600_SDK (ARMV4I) = Debug|MT3351_WINCE600_SDK (ARMV4I)
+		Release|MT3351_WINCE600_SDK (ARMV4I) = Release|MT3351_WINCE600_SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A5F6146-EBC0-4825-910E-83EE762B7E7E}.Debug|MT3351_WINCE600_SDK (ARMV4I).ActiveCfg = Debug|MT3351_WINCE600_SDK (ARMV4I)
+		{1A5F6146-EBC0-4825-910E-83EE762B7E7E}.Debug|MT3351_WINCE600_SDK (ARMV4I).Build.0 = Debug|MT3351_WINCE600_SDK (ARMV4I)
+		{1A5F6146-EBC0-4825-910E-83EE762B7E7E}.Debug|MT3351_WINCE600_SDK (ARMV4I).Deploy.0 = Debug|MT3351_WINCE600_SDK (ARMV4I)
+		{1A5F6146-EBC0-4825-910E-83EE762B7E7E}.Release|MT3351_WINCE600_SDK (ARMV4I).ActiveCfg = Release|MT3351_WINCE600_SDK (ARMV4I)
+		{1A5F6146-EBC0-4825-910E-83EE762B7E7E}.Release|MT3351_WINCE600_SDK (ARMV4I).Build.0 = Release|MT3351_WINCE600_SDK (ARMV4I)
+		{1A5F6146-EBC0-4825-910E-83EE762B7E7E}.Release|MT3351_WINCE600_SDK (ARMV4I).Deploy.0 = Release|MT3351_WINCE600_SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {540CD91E-D94F-49F7-9B39-CB21506356B0}
+	EndGlobalSection
+EndGlobal

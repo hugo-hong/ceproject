@@ -1,0 +1,207 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resdefce.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_EPLAYER             ICON                    "res\\EPlayer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "AVIN"
+        BEGIN
+            MENUITEM "AV1",                         ID_AVIN_AV1
+            MENUITEM "AV2",                         ID_AVIN_AV2
+            MENUITEM "AV3",                         ID_AVIN_AV3
+            MENUITEM "AV4",                         ID_AVIN_AV4
+            MENUITEM "AV5",                         ID_AVIN_AV5
+        END
+        POPUP "DISK"
+        BEGIN
+            MENUITEM "File...",                     ID_DISK_FILE
+        END
+        POPUP "DVD"
+        BEGIN
+            MENUITEM "Entry",                       ID_DVD_ENTRY
+            MENUITEM "Exit",                        ID_DVD_EXIT
+        END
+        MENUITEM "E&xit",                       IDM_FILE_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_EPLAYER ACCELERATORS 
+BEGIN
+    "A",            IDM_HELP_ABOUT,         VIRTKEY, CONTROL, NOINVERT
+    "Q",            IDOK,                   VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 125, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE 0x80000000L
+CAPTION "About EPlayer"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON            IDI_EPLAYER,IDC_STATIC,11,17,20,20
+    LTEXT           "EPlayer Version 1.0",IDC_STATIC,38,10,70,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,38,25,70,8
+END
+
+IDD_PLAYERDLG DIALOG  0, 0, 342, 230
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "EPlayer"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "",IDC_SLIDER_PROGRESS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,15,194,287,15
+    LTEXT           "",IDC_PLAYWINDOW,13,18,311,169,WS_BORDER
+    PUSHBUTTON      "|>||",IDC_PLAY_PAUSE,126,204,28,17
+    PUSHBUTTON      ">|",IDC_NEXT,171,204,28,17
+    PUSHBUTTON      "|<",IDC_PREV,81,204,28,17
+    CONTROL         "",IDC_SLIDER_VOLUME,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,231,204,72,17
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 118
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PLAYERDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 341
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 227
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resdefce.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""EPlayer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "EPlayer"
+    IDC_EPLAYER             "EPLAYER"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TOOLS               "Tools"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "EPlayer.rc2"  // non-Microsoft Visual C++ edited resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

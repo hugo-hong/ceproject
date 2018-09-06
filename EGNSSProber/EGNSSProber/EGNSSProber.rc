@@ -1,0 +1,283 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resdefce.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_EGNSSPROBER         ICON                    "res\\EGNSSProber.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "F&ullSrceen",                 ID_FILE_FULLSRCEEN
+        MENUITEM "&Normal",                     ID_FILE_NORMAL
+        MENUITEM SEPARATOR
+        MENUITEM "&SaveLog",                    ID_FILE_SAVELOG
+        MENUITEM "&DebugLog",                   ID_FILE_DEBUGLOG
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Clear&Rx",                    ID_EDIT_CLEARRX
+        MENUITEM "Clear&Tx",                    ID_EDIT_CLEARTX
+        MENUITEM "Clear&All",                   ID_EDIT_CLEARALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_EGPSDEMO ACCELERATORS 
+BEGIN
+    "A",            IDM_HELP_ABOUT,         VIRTKEY, CONTROL, NOINVERT
+    "Q",            IDOK,                   VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 125, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE 0x80000000L
+CAPTION "About EGNSSProber"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON            IDI_EGNSSPROBER,IDC_STATIC,11,17,20,20
+    LTEXT           " Version 2.0",IDC_STATIC,38,10,70,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,38,25,70,8
+END
+
+IDD_DEMO_DLG DIALOG  0, 0, 299, 178
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "EGNSSProber"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "",IDC_TAB_GNSS,"SysTabControl32",0x0,25,15,246,148
+END
+
+IDD_DLG_COMM DIALOG  0, 0, 323, 194
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_EDIT_RX,13,12,292,141,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_TX,14,160,255,15,ES_MULTILINE | ES_AUTOHSCROLL
+    PUSHBUTTON      "Send",IDC_BUTTON_SEND,272,159,35,16
+END
+
+IDD_DLG_TRACK DIALOG  0, 0, 311, 186
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         135,IDC_STATIC_BMP,"Static",SS_BITMAP,7,68,116,107
+    LTEXT           "FixedType:",IDC_STATIC_FIXTYPE,136,74,37,8
+    LTEXT           "",IDC_STATIC_FIX_VALU,183,74,56,8
+    LTEXT           "UTC:",IDC_STATIC_UTC,136,89,31,8
+    LTEXT           "",IDC_STATIC_UTC_VALU,183,89,106,8
+    LTEXT           "Latitude:",IDC_STATIC_LAT,136,104,30,8
+    LTEXT           "",IDC_STATIC_LAT_VALU,183,104,106,8
+    LTEXT           "Longtitude:",IDC_STATIC_LON,136,119,38,8
+    LTEXT           "",IDC_STATIC_LOG_VALU,183,119,106,8
+    LTEXT           "Altitude:",IDC_STATIC_ALT,136,134,28,8
+    LTEXT           "",IDC_STATIC_ALT_VALU,183,134,106,8
+    LTEXT           "Speed:",IDC_STATIC_SPEED,136,149,24,8
+    LTEXT           "",IDC_STATIC_SPEED_VALU,183,149,106,8
+    LTEXT           "Direction:",IDC_STATIC_DIR,136,164,32,8
+    LTEXT           "",IDC_STATIC_DIR_VALU,183,164,106,8
+    LTEXT           "",IDC_FIX_TIME,256,74,42,8
+END
+
+IDD_DLG_SETTINGS DIALOG  0, 0, 163, 198
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDC_COMBO_PORT,88,20,48,72,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BAUDRATE,88,45,48,61,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DATABITS,88,70,48,62,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PARITY,88,95,48,66,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_STOPBITS,88,120,48,63,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDC_BUTTON_OK,30,150,42,20
+    PUSHBUTTON      "Cancel",IDC_BUTTON_CANCEL,94,150,42,20
+    LTEXT           "Port:",IDC_STATIC_PORT,31,23,17,8
+    LTEXT           "Baudrate:",IDC_STATIC_BAUD,30,48,33,8
+    LTEXT           "DataBits:",IDC_STATIC_DATABIT,30,73,30,8
+    LTEXT           "Parity:",IDC_STATIC_PARITY,30,98,22,8
+    LTEXT           "StopBits:",IDC_STATIC_STOPBITS,30,123,30,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 118
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DEMO_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_DLG_COMM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 316
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_DLG_TRACK, DIALOG
+    BEGIN
+        RIGHTMARGIN, 305
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_DLG_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 191
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resdefce.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""EGNSSProber.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMP_CONNECT         BITMAP                  "res\\connect.bmp"
+IDB_BMP_DISCONNECT      BITMAP                  "res\\disconnect.bmp"
+IDB_BMP_SEETING         BITMAP                  "res\\settings.bmp"
+IDB_BMP_SKY             BITMAP                  "res\\sky.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "EGNSSProber"
+    IDC_EGNSSPROBER         "EGNSSPROBER"
+    IDS_COLD_BOOT           "Cold"
+    IDS_WARM_BOOT           "Warm"
+    IDS_HOT_BOOT            "Hot"
+    IDS_FULLCOLD_BOOT       "FullCold"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TOOLS               "Tools"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "EGNSSProber.rc2"  // non-Microsoft Visual C++ edited resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

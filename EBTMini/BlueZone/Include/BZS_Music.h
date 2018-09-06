@@ -1,0 +1,137 @@
+ /*****************************************************************************
+ *  Copyright Statement:
+ *  --------------------
+ *  This software is protected by copyright and the information contained
+ *  herein is confidential. The software may not be copied and the information
+ *  contained herein may not be used or disclosed except with the written
+ *  permission of MediaTek Inc.   2008 MediaTek Inc.
+ *
+ *  BY OPENING THIS FILE, BUYER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND AGREES
+ *  THAT THE SOFTWARE/FIRMWARE AND ITS DOCUMENTATIONS ("MEDIATEK SOFTWARE")
+ *  RECEIVED FROM MEDIATEK AND/OR ITS REPRESENTATIVES ARE PROVIDED TO BUYER ON
+ *  AN "AS-IS" BASIS ONLY. MEDIATEK EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES,
+ *  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+ *  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT.
+ *  NEITHER DOES MEDIATEK PROVIDE ANY WARRANTY WHATSOEVER WITH RESPECT TO THE
+ *  SOFTWARE OF ANY THIRD PARTY WHICH MAY BE USED BY, INCORPORATED IN, OR
+ *  SUPPLIED WITH THE MEDIATEK SOFTWARE, AND BUYER AGREES TO LOOK ONLY TO SUCH
+ *  THIRD PARTY FOR ANY WARRANTY CLAIM RELATING THERETO. MEDIATEK SHALL ALSO
+ *  NOT BE RESPONSIBLE FOR ANY MEDIATEK SOFTWARE RELEASES MADE TO BUYER'S
+ *  SPECIFICATION OR TO CONFORM TO A PARTICULAR STANDARD OR OPEN FORUM.
+ *
+ *  BUYER'S SOLE AND EXCLUSIVE REMEDY AND MEDIATEK'S ENTIRE AND CUMULATIVE
+ *  LIABILITY WITH RESPECT TO THE MEDIATEK SOFTWARE RELEASED HEREUNDER WILL BE,
+ *  AT MEDIATEK'S OPTION, TO REVISE OR REPLACE THE MEDIATEK SOFTWARE AT ISSUE,
+ *  OR REFUND ANY SOFTWARE LICENSE FEES OR SERVICE CHARGE PAID BY BUYER TO
+ *  MEDIATEK FOR SUCH MEDIATEK SOFTWARE AT ISSUE.
+ *
+ *  THE TRANSACTION CONTEMPLATED HEREUNDER SHALL BE CONSTRUED IN ACCORDANCE
+ *  WITH THE LAWS OF THE STATE OF CALIFORNIA, USA, EXCLUDING ITS CONFLICT OF
+ *  LAWS PRINCIPLES.  ANY DISPUTES, CONTROVERSIES OR CLAIMS ARISING THEREOF AND
+ *  RELATED THERETO SHALL BE SETTLED BY ARBITRATION IN SAN FRANCISCO, CA, UNDER
+ *  THE RULES OF THE INTERNATIONAL CHAMBER OF COMMERCE (ICC).
+ *
+ *****************************************************************************/ 
+
+/*****************************************************************************
+ *
+ * szFileName:
+ * ---------
+ *   $Workfile:  $ 
+ *
+ * Project:
+ * --------
+ *   MTKBluetooth
+ *
+ * Description:
+ * ------------
+ *   
+ *   
+ * Author:
+ * -------
+ *   mtk40390
+ *
+ * Last changed:
+ * ------------- 
+ * $Author: yongguang.hong $ 
+ *
+ * $Modtime: $  
+ 
+ * $Revision: #4 $
+****************************************************************************/
+
+
+#ifndef _BZS_MUSIC_H_
+#define _BZS_MUSIC_H_
+
+typedef enum _tag_BTAVRCPConnStatus
+{
+    BT_AVRCP_CONNECT_STATUS_DISCONNECTED,
+    BT_AVRCP_CONNECT_STATUS_CONNECTED,
+    BT_AVRCP_CONNECT_STATUS_NOTSUPPORT,
+    NUM_OF_BT_AVRCP_CONNECT_STATUS
+} E_BT_AVRCP_CONNECT_STATUS_T;
+
+typedef enum _tag_BTA2DPConnStatus
+{
+    BT_A2DP_CONNECT_STATUS_DISCONNECTED,
+    BT_A2DP_CONNECT_STATUS_CONNECTED,
+    BT_A2DP_CONNECT_STATUS_SUSPENDED,
+    BT_A2DP_CONNECT_STATUS_STREAMING,
+    BT_A2DP_CONNECT_STATUS_NOTSUPPORT,
+    NUM_OF_BT_A2DP_CONNECT_STATUS
+} E_BT_A2DP_CONNECT_STATUS_T;
+
+typedef enum _tag_MUSICPLAYSTATUS
+{
+    BT_MUSICPLAY_STATUS_DISCONNECTED,
+    BT_MUSICPLAY_STATUS_PLAYING,
+    BT_MUSICPLAY_STATUS_STOP,
+	BT_MUSICPLAY_STATUS_PAUSE,
+	BT_MUSICPLAY_STATUS_READY,
+    NUM_OF_BT_MUSICPLAY_STATUS,
+} E_BT_MUSICPLAYSTATUS_T;
+
+typedef enum _tag_BTAVDTPConnStatus
+{
+    BT_AVDTP_CONNECT_STATUS_DISCONNECTED,
+    BT_AVDTP_CONNECT_STATUS_CONNECTED,
+    NUM_OF_BT_AVDTP_CONNECT_STATUS
+} E_BT_AVDTP_CONNECT_STATUS_T;
+
+
+typedef unsigned char       UCHAR;
+typedef unsigned char       UINT8;
+typedef unsigned short      UINT16;
+typedef unsigned int        UINT32;
+#define MAX_LEN             128
+
+typedef struct _MediaAttribute_T
+{
+    UCHAR uAttributeTitle[MAX_LEN];
+    UCHAR uAttributeArtist[MAX_LEN];
+    UCHAR uAttributeAlbum[MAX_LEN];
+    UCHAR uAttributeGenre[MAX_LEN];
+    UINT32 u4TrackIndex;
+    UINT32 u4TrackTotalNum;
+    UINT32 u4TrackTime;   // total time of cur track
+}MediaAttribute_T;
+
+enum A2DPPlayState
+{
+    PLAY_STATE_STOPPED = 0,
+    PLAY_STATE_PLAYING,
+    PLAY_STATE_PAUSED,
+    PLAY_STATE_FWD_SEEK,
+    PLAY_STATE_REV_SEEK,
+    PLAY_STATE_ERROR = 0XFF,
+};
+
+typedef struct _A2DPPlayState_T
+{
+    UINT32 u4SongTotalTime;
+    UINT32 U4CurPlayTime;
+    UCHAR  uPlayState;
+}A2DPPlayState_T;
+#endif /* _BZS_MUSIC_H_ */
+
